@@ -11,7 +11,7 @@ html {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: minmax(225px, 1.5fr) 6fr;
-  grid-template-rows: 1fr 1fr 5fr 1fr;
+  grid-template-rows: 1.75fr .1fr 12fr .1fr;
   gap: 4px;
   grid-template-areas: 
   "header header"
@@ -21,8 +21,8 @@ html {
 }
 
 .container div {
-  padding: 15px;
-  font-size: 32px;
+  padding: 5px;
+  font-size: 1rem;
   font-family: Helvetica;
   font-weight: bold;
   color: white;
@@ -43,6 +43,10 @@ html {
   gap: 50px;
 }
 
+.container .sidebar {
+    padding: 15px;
+}
+
 .sidebars {
     background-color: white;
     color: black;
@@ -56,6 +60,7 @@ html {
   grid-area: nav;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-rows: 1fr;
 
 }
 
@@ -74,6 +79,7 @@ html {
 .footer {
   background-color: #393f4d;
   grid-area: footer;
+  font-size: 1rem;
 }
 
 .article p {
