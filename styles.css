@@ -32,10 +32,32 @@ html {
 .header {
   background-color:  #393f4d;
   grid-area: header;
+  display: grid;
+  grid-template-columns: minmax(200px, 1fr) (auto-fit, 1fr);
+  grid-template-rows: 1fr;
+  grid-template-areas: 
+  "headerLogo headerLinks";
 }
 
+.headerLogo {
+    grid-area: headerLogo;
+    justify-self: start;
+    margin-left: 35px;
+}
+
+.headerLinks {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: 1fr;
+    grid-area: headerLinks;
+    align-items: center;
+    justify-items: center;
+}
+
+
+
 .sidebar {
-  background-color: red;    
+  background-color: rgb(196, 0, 0);    
   grid-area: sidebar;
   display: grid;
   grid-template-columns: 1fr;
@@ -47,20 +69,25 @@ html {
     padding: 15px;
 }
 
-.sidebars {
+.container .sidebars {
     background-color: white;
     color: black;
     text-align: center;
     overflow: auto;
+    font-size: 1rem;
+    padding-top: 16%;
     
+}
+.sidebars.One {
+    border-radius: 10px; 
 }
 
 .nav {
-  background-color: red;
-  grid-area: nav;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-template-rows: 1fr;
+    background-color: rgb(196, 0, 0);    
+    grid-area: nav;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: 1fr;
 
 }
 
@@ -74,17 +101,36 @@ html {
   background-color: grey;
   grid-area: article;
   overflow: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: minmax(200px, 1fr);
+  gap: 15px;
+}
+
+.container .article {
+  padding: 15px;
+
+}
+
+.container .articles {
+    background-color: white;
+    color: black;
+    text-align: center;
+    overflow: auto;
+    font-size: .8rem;
 }
 
 .footer {
   background-color: #393f4d;
   grid-area: footer;
+  font-size: .5rem;
+}
+/* 
+.articles p {
   font-size: 1rem;
-}
-
-.article p {
-  font-size: 18px;
   font-family: sans-serif;
-  color: white;
+  color: black;
   text-align: left;
-}
+  
+} */
