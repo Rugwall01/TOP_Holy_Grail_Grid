@@ -11,7 +11,7 @@ html {
   box-sizing: border-box;
   display: grid;
   grid-template-columns: minmax(225px, 1.5fr) 6fr;
-  grid-template-rows: 1.75fr .1fr 12fr .1fr;
+  grid-template-rows: 1.75fr .1fr 12fr .5fr;
   gap: 4px;
   grid-template-areas: 
   "header header"
@@ -98,7 +98,7 @@ html {
 }
 
 .article {
-  background-color: grey;
+  background-color: lightsteelblue;
   grid-area: article;
   overflow: auto;
   display: grid;
@@ -121,10 +121,12 @@ html {
     font-size: .8rem;
 }
 
-.footer {
+.container .footer {
   background-color: #393f4d;
   grid-area: footer;
-  font-size: .5rem;
+  font-size: .7rem;
+  font-weight: lighter;
+  padding-top: .5%;
 }
 /* 
 .articles p {
